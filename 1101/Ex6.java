@@ -30,7 +30,7 @@ class Ex6{
 	public int [] ex6_4(int [] a){
 		int [] ret = new int[4];
 		int valSum = 0;
-		int valMax = 0;
+		int valMax = a[0];
 		for (int i = 0; i < a.length; i++) {
 			valSum += a[i];
 			if (valMax < a[i]) {
@@ -99,11 +99,9 @@ class Ex6{
 
 	public void ex6_8(int [] a, int idx, int n){
 		int val = n - idx;
-		if (val == 0) {
-		}
-		if (val < 0) {
+		if (val == a.length-1) {
 			a[0] = a[a.length-1];
-		} if (val > 0) {
+		} if (val > 0 && val < a.length-1) {
 			for (int i = 0; i < val; i++) {
 			a[val+i-1] = a[a.length-val+i];
 			}
